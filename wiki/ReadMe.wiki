@@ -1,0 +1,22 @@
+#summary One-sentence summary of this page.
+
+= Django Tagging =
+
+This is a generic tagging application for use in Django projects.
+
+== Installation ==
+
+Use the following command to check out the latest source:
+
+svn checkout http://django-tagging.googlecode.com/svn/trunk/ tagging
+
+== Usage Instructions ==
+
+Put this app into your `INSTALLED_APPS` setting and run `syncdb` to create the tables it requires.
+
+== Implementation Details ==
+
+The application defines two models:
+
+  * `Tag`, which is a basic model representing a tag. Methods which return tags are implemented in its manager.
+  * `TaggedItem`, which uses Django's Generic Relations functionality to represent the relationship between a tag and any other object. Methods which return objects based on the tags they have are implemented in its manager.
