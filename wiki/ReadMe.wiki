@@ -1,5 +1,3 @@
-#summary One-sentence summary of this page.
-
 = Django Tagging =
 
 This is a generic tagging application for use in Django projects.
