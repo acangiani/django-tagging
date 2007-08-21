@@ -1,0 +1,29 @@
+#summary Scratch area for ideas and planning
+#labels Phase-Design
+
+= Normalised Tags =
+
+Steps to implement basic tag normalisation.
+
+== Utilities ==
+
+  * Create a utility function to normalise tag names - remove all non-word characters, strip and lowercase.
+  * Modify `get_tag_name_list` to split on spaces and remove any empty strings.
+  * `get_tag_list` and `get_tag` need to use normalised names for name_based lookups.
+  * Update validation functions to check normalised tag names - check that normalised tag names are non-zero length.
+
+== Models & Managers ==
+
+  * Add a field to `TaggedItem` to hold the tag entered by the user.
+  * Update `TagManager.update_tags` to check against the normalised name and add the user tag  when creating `TaggedItem`s.
+  * Update `TagManager.get_for_object` to also return the user tag - the `extra` method looks like the way to go, since we're already joining onto the tagged_item table for content_type and object_id.
+  * Remove the `FORCE_LOWERCASE_TAGS` setting, as normalised tag names should take care of the main reason you'd want to use it.
+
+== Fields ==
+
+  * `tagging.fields.TagField` needs to display user tags for editing.
+
+== Open Questions ==
+
+  * How could we implement this and still allow nifty things like use of Unicode non-word characters for their graphical fit (e.g. using a musical note character to tag music)?
+  * Are we still trying to be too restrictive? This wouldn't allow things like tagging with star ratings. Do we care if someone wants to tag something with 19 underscores?
