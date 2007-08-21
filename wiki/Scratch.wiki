@@ -1,6 +1,10 @@
 #summary Scratch area for ideas and planning
 #labels Phase-Design
 
+= What's It All About? =
+
+  * `django-tagging` can't be all things to all people - do we really want del.icio.us-style "do what you want, I'll make quotes part of your actual tags" (which happens to be easier to implement), or a flickr style "no you can't have ___ as a tag"? Is there a happy medium somewhere?
+
 = Normalised Tags =
 
 Steps to implement basic tag normalisation.
