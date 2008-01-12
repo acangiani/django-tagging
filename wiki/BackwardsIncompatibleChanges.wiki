@@ -7,4 +7,4 @@
 
 Flexible multi-word tags will be landing in SVN trunk soon - this is being used as an opportunity to clean up some longstanding untidiness. Other known changes which will definitely be backwards incompatible are:
 
-  * The `Tag` and `TaggedItem` models will no longer set the `db_table` properties in their inner `Meta` class - Tthis means that unless you put the override back in yourself, you'll have to rename your database tables to `tagging_tag` and `tagging_taggeditem`, respectively. These were a hangover from when SQL queries were originally being written by hand - the appropriate table names are now plugged in using each model's `Options` (`_meta`).
+  * The `Tag` and `TaggedItem` models will no longer set the `db_table` properties in their inner `Meta` class - this means that unless you put the override back in yourself, you'll have to rename your database tables to `tagging_tag` and `tagging_taggeditem`, respectively. These were a hangover from when SQL queries were originally being written by hand - the appropriate table names are now plugged in using each model's `Options` (`_meta`).
