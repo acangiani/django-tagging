@@ -26,11 +26,3 @@ e = Entry.objects.get(pk=12)
 e.tags # prints the tag list
 e.tags = 'foo bar' # now the Entry is tagged with 'foo' and 'bar'
 }}}
-
-== Non-ASCII Tag Names in URLs ==
-
-One way to map URLS containing non-ASCII characters if you want to use tag names in your URLS, courtesy of [http://code.google.com/u/book4e/ book4e]:
-
-{{{
-(r'^tags/(?P<tag_name>[^/]+)/(?u)$', 'my.views.method'),
-}}}
