@@ -1,10 +1,16 @@
 #summary Backwards-incompatible changes to Django Tagging
 #labels Phase-Design,Featured
 
-== Revision 114 (12th January, 2008) ==
+== Backwards-incompatible changes since version 0.1 (Revision 79) ==
+
+=== Revision 114 (12th January, 2008) ===
 
 Flexible multi-word tags landed in SVN trunk - this was used as an opportunity to clean up some long-standing untidiness. Other backwards-incompatible changes:
 
   * The `Tag` and `TaggedItem` models *no longer set the `db_table` properties* in their inner `Meta` class - this means that unless you put the override back in yourself, *you'll have to rename your database tables* to `tagging_tag` and `tagging_taggeditem`, respectively. These were a hangover from when SQL queries were originally being written by hand - the appropriate table names are now plugged in to queries using each model's `Options` (`_meta`).
 
   * `tagging.utils.get_tag_name_list` has been removed, as have all regular expressions related to tag input/validation.
+
+== Backwards-incompatible changes since version 0.2 (Revision 122) ==
+
+None yet.
