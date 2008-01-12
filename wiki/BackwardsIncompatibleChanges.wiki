@@ -1,7 +1,7 @@
 #summary Backwards-incompatible changes to Django Tagging
 #labels Phase-Design,Featured
 
-== Revision 114 - 11th January, 2007 ==
+== Revision 114 (12th January, 2008) ==
 
 Flexible multi-word tags landed SVN trunk - this was used as an opportunity to clean up some longstanding untidiness. Other known changes which will definitely be backwards incompatible are:
 
