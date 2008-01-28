@@ -13,4 +13,8 @@ Flexible multi-word tags landed in SVN trunk - this was used as an opportunity t
 
 == Backwards-incompatible changes since version 0.2 (Revision 122) ==
 
-None yet.
+=== Revision 130 (21st January, 2008) ===
+
+`TaggedItemManager`'s methods now accept a `queryset_or_model` argument instead of a `model` argument, so you'll need to change your code if you were using `model` as a keyword argument.
+
+The `tagged_object_list` generic view's `model` argument has also been renamed to `queryset_or_model`.
